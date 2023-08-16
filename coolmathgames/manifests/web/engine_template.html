@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script type="text/javascript" src="https://www.coolmathgames.com/sites/default/files/cmg-ads.js"></script>
+</head>
+
+<body>
+	<script>
+		document.addEventListener("adBreakStart", () => {
+			console.log("JS:", "adBreakStart");
+			JsToDef.send("CoolmathGames_adBreakStart");
+		});
+		document.addEventListener("adBreakComplete", () => {
+			console.log("JS:", "adBreakComplete");
+			JsToDef.send("CoolmathGames_adBreakComplete");
+		});
+	</script>
+</body>
+</html>

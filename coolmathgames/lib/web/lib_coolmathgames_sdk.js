@@ -3,8 +3,14 @@
 var LibCoolmathGamesSdk = {
 
     CoolmathGamesSdkJs_cmgGameEvent: function(cm_game_evt, cm_game_lvl) {
+        cm_game_evt = UTF8ToString(cm_game_evt);
+        cm_game_lvl = UTF8ToString(cm_game_lvl);
         if (parent.cmgGameEvent) {
-            parent.cmgGameEvent(UTF8ToString(cm_game_evt), UTF8ToString(cm_game_lvl));
+            if (cm_game_lvl) {
+                parent.cmgGameEvent(cm_game_evt, cm_game_lvl);
+            } else {
+                parent.cmgGameEvent(cm_game_evt);
+            }
         }
     },
 

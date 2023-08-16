@@ -16,7 +16,10 @@ extern "C" {
 static int CoolmathGamesSdkJs_cmgGameEventLua(lua_State* L){
     DM_LUA_STACK_CHECK(L, 0);
     const char* cm_game_evt = luaL_checkstring(L, 1);
-    const char* cm_game_lvl = luaL_checkstring(L, 2);
+    const char* cm_game_lvl = nullptr;
+    if (lua_type(L, 2) == LUA_TSTRING) {
+        cm_game_lvl = luaL_checkstring(L, 2);
+    }
     CoolmathGamesSdkJs_cmgGameEvent(cm_game_evt, cm_game_lvl);
     return 0;
 }

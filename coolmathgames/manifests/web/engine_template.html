@@ -7,11 +7,9 @@
 <body>
 	<script>
 		document.addEventListener("adBreakStart", () => {
-			console.log("JS:", "adBreakStart");
 			JsToDef.send("CoolmathGames_adBreakStart");
 		});
 		document.addEventListener("adBreakComplete", () => {
-			console.log("JS:", "adBreakComplete");
 			JsToDef.send("CoolmathGames_adBreakComplete");
 		});
 	</script>

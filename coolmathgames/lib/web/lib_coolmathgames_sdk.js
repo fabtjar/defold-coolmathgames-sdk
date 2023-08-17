@@ -7,6 +7,7 @@ var LibCoolmathGamesSdk = {
         console.log("before:");
         console.log("cm_game_evt:", cm_game_evt);
         console.log("cm_game_lvl:", cm_game_lvl);
+        console.log("typeof cm_game_lvl:", typeof cm_game_lvl);
         cm_game_evt = UTF8ToString(cm_game_evt);
         cm_game_lvl = UTF8ToString(cm_game_lvl);
         console.log("after:");

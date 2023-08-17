@@ -4,15 +4,18 @@ var LibCoolmathGamesSdk = {
 
     CoolmathGamesSdkJs_cmgGameEvent: function(cm_game_evt, cm_game_lvl) {
         console.log("*** CoolmathGamesSdkJs_cmgGameEvent ***");
-        console.log("before:");
-        console.log("cm_game_evt:", cm_game_evt);
-        console.log("cm_game_lvl:", cm_game_lvl);
-        console.log("typeof cm_game_lvl:", typeof cm_game_lvl);
+
         cm_game_evt = UTF8ToString(cm_game_evt);
-        cm_game_lvl = UTF8ToString(cm_game_lvl);
-        console.log("after:");
-        console.log("cm_game_evt:", cm_game_evt);
-        console.log("typeof cm_game_lvl:", typeof cm_game_lvl);
+
+        // Only convert to string if it's not a null pointer.
+        cm_game_lvl = cm_game_lvl ? UTF8ToString(cm_game_lvl) : undefined;
+
+        if (cm_game_lvl) {
+            console.log("cm_game_lvl:", cm_game_lvl, "valid");
+        } else {
+            console.log("cm_game_lvl:", cm_game_lvl, "undefined");
+        }
+
         if (parent.cmgGameEvent) {
             if (cm_game_lvl) {
                 parent.cmgGameEvent(cm_game_evt, cm_game_lvl);

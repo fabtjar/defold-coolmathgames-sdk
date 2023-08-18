@@ -1,6 +1,6 @@
 # Coolmath Games SDK native extension for Defold
 
-A native extension for the [Defold](https://defold.com) to integrate with the Coolmath Games SDK.
+A native extension for the [Defold](https://defold.com) to use the Coolmath Games SDK.
 
 This extension uses [JsToDef](https://github.com/AGulev/jstodef) to send messages from JavaScript to Lua.
 

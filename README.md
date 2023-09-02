@@ -6,11 +6,19 @@ This extension uses [JsToDef](https://github.com/AGulev/jstodef) to send message
 
 ## Installation
 
-Add this library in your own project as a Defold library dependency. Open your `game.project` file and in the dependencies field under project add:
-https://github.com/fabtjar/defold-coolmathgames-sdk/archive/refs/heads/main.zip.
+You can use this library in your own project by adding this project as a [Defold library dependency](http://www.defold.com/manuals/libraries/). Open your game.project file and in the dependencies field under project add:
 
-Add [JsToDef](https://github.com/AGulev/jstodef) in your own project as a Defold library dependency. Open your `game.project` file and in the dependencies field under project add: https://github.com/AGulev/jstodef/archive/master.zip
-or point to the ZIP file of a [specific release](https://github.com/AGulev/jstodef/releases).
+https://github.com/fabtjar/defold-coolmathgames-sdk/archive/refs/heads/main.zip
+
+Or point to the ZIP file of a [specific release](https://github.com/fabtjar/defold-coolmathgames-sdk/releases).
+
+### JsToDef
+
+[JsToDef](https://github.com/AGulev/jstodef) will also be needed. Open your game.project file and in the dependencies field under project add:
+
+https://github.com/AGulev/jstodef/archive/master.zip
+
+Or point to the ZIP file of a [specific release](https://github.com/AGulev/jstodef/releases).
 
 ## API
 
